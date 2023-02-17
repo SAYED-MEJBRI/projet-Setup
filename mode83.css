@@ -1,0 +1,216 @@
+:root {
+    font-size: 62.7%;
+    /* Déclaration avec double tiret -- */
+    --theme1: #333;
+    --theme2: violet;
+    --light: #fff;
+    --dark: #333;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+  
+    /* border: 1px dashed white;
+    background-color: hsla(0, 0%, 0%, 0.1); */
+    /* Roue Chromatique, saturation, luminosité, alpha*/
+}
+body {
+    margin: 0;
+    font-size: large;
+    font-family: 'Roboto', sans-serif;
+    word-break: break-all;
+}
+img,
+video,
+svg {
+    width: 100%;
+    height: auto;
+}
+figure {
+    margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0 0 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Monda', sans-serif;
+}
+a {
+    color: var(--theme2);
+}
+/* ANCHOR FLEX CONTAINER (PARENT) */
+.d-flex {
+    display: flex;
+}
+.fd-row {
+    flex-direction: row;
+}
+.fd-row-r {
+    flex-direction: row-reverse;
+}
+.fd-col {
+    flex-direction: column;
+}
+.fd-col-r {
+    flex-direction: column;
+}
+.fw-wrap {
+    flex-wrap: wrap;
+}
+.fw-wrap-r {
+    flex-wrap: wrap-reverse;
+}
+.jc-c {
+    justify-content: center;
+}
+.jc-sa {
+    justify-content: space-around;
+}
+.jc-sb {
+    justify-content: space-between;
+}
+.jc-se {
+    justify-content: space-evenly;
+}
+.ai-c {
+    align-items: center;
+}
+.ac-c {
+    align-content: center;
+}
+.g-1 {
+    gap: 1rem;
+}
+/* ANCHOR FLEX ITEM (ENFANT) */
+.f-1-280 {
+    flex: 1 1 280px;
+}
+.f-2-560 {
+    flex: 2 1 560px;
+}
+.as-fe {
+    align-self: flex-end;
+}
+/* ANCHOR SIZING */
+.mw-280 {
+    max-width: 280px;
+}
+.w-280 {
+   width: 280px;
+}
+.mw-900 {
+    max-width: 900px;
+}
+.mw-1320 {
+    max-width: 1320px;
+}
+.w-100 {
+    width: 100%;
+}
+/* ANCHOR SPACING */
+.m-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.p-0 {
+    padding: 0.4rem;
+}
+.p-1 {
+    padding: 1rem;
+}
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.py-1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+/* ANCHOR COLOR */
+.bg-primary {
+    background-color:  var(--theme1);
+}
+/* ANCHOR TYPO */
+.fs-1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-white {
+    color: #ffffff;
+}
+/* ANCHOR BUTTON */
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--theme1);
+    border: 2px solid transparent;
+    color: var(--light);
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid  var(--dark);
+    color: var(--dark);
+}
+.link {
+    display: inline-block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+/* ANCHOR  OTHER */
+.inline-block {
+    display: inline-block;
+}
+.inline {
+    display: inline;
+}
+.block {
+    display: block;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.br-1 {
+    border-radius: 5px;
+}
+.bs-0 {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.overflow-h {
+    overflow: hidden;
+}

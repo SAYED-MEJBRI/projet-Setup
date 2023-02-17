@@ -1,28 +1,38 @@
 body {
     font-family: sans-serif;
-    margin: 0 50px;
-    background-color: #e5e5e5;
+    margin: 50 50px;
+    background-color: #ffffff;
+    border: 5px solid #abcea1;
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
   }
   .app {
     background-color: #fff;
-    width: 300px;
-    height: 500px;
+    max-width: 300px; 
+    /* height: 500px; */
     border: 5px solid #abcea1;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  .desktop {
+    background-color: #fff;
+    min-width:  320px;
+    min-height: 500px;
+    /* border: 5px solid #abcea1; */
     border-radius: 8px;
     padding: 15px;
   }
   #addNew {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: rgba(171, 206, 161, 0.35);
-    padding: 5px 10px;
-    border-radius: 5px;
+    align-items: center; 
+    background-color:  #ede29b;
+    color: white;
+    padding: 11px 10px;
+    border-radius: 0px 20px 20px 0px;
     cursor: pointer;
   }
   .fa-plus {
@@ -34,8 +44,9 @@ body {
     color: red;
   }
   #tasks {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 14px;
   }
   
@@ -44,7 +55,22 @@ body {
     background-color: #e2eede;
     border-radius: 6px;
     padding: 5px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    width: 280px;
+    gap: 4px;
+  }
+    
+.tache {
+    border: 3px solid #abcea1;
+    background-color: #e2eede;
+    border-radius: 6px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    width: 280px;
     gap: 4px;
   }
   #tasks div .options {
@@ -55,4 +81,26 @@ body {
   
   #tasks div .options i {
     cursor: pointer;
+  }
+  .btn1{
+  background-color: #ede29b; /* Green */
+  border-radius: 0px 20px 20px 0px;
+  border: none;
+  color: white;
+  padding: 15px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
+  .btn1:hover{
+    background-color:white; /* Green */
+   
+    border: none;
+    color:#ede29b ;
+
+    
+    }
+  .jc-fs{
+    justify-content: flex-start;
   }
