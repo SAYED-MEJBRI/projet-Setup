@@ -1,4 +1,5 @@
 let form = document.getElementById("form");
+
 let textInput = document.getElementById("textInput");
 let dateInput = document.getElementById("dateInput");
 let textarea = document.getElementById("textarea");
@@ -12,13 +13,13 @@ let tasks2 = document.getElementById("tasks2");
 let tasks3 = document.getElementById("tasks3");
 let current = document.getElementById("current");
 let add = document.getElementById("add");
-
-
+ 
 
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    formValidation();
+     formValidation();
+   console.log(' action => ',  );
   });
   
   let formValidation = () => {
@@ -53,17 +54,14 @@ let acceptData = () => {
   localStorage.setItem("data", JSON.stringify(data));
 
   console.log(data);
-  // const btntodo=document.getElementById('TODO');
-  // btntodo.addEventListener("click",createTasks())
-  // const btnCURRENT=document.getElementById('CURRENT');
-  // btntodo.addEventListener("click",createCurrent())
+ 
    createTasks();
 };
 
 let createTasks = () => {
-    tasks1.innerHTML = "";
-    tasks2.innerHTML = "";
-    tasks3.innerHTML = "";
+    tasks1.innerHTML =  `<div class="btn1 w-280"> <strong>TODO<hr></strong> </div>`;
+    tasks2.innerHTML =  `<div class="btn1 w-280"> <strong>CURRENT<hr></strong> </div>`;
+    tasks3.innerHTML =  `<div class="btn1 w-280"> <strong>FINISH<hr></strong> </div>`;
     data.map((x, y) => {
       let template=`
 <div id=${y}>
@@ -78,15 +76,15 @@ let createTasks = () => {
     </div>
 `
       if (x.statut==='faire') {
-        tasks1.innerHTML += template;
+        tasks1.innerHTML += '<div>'+ template +'</div>';
         return tasks1
       }
       if (x.statut==='courant') {
-        tasks2.innerHTML += template;
+        tasks2.innerHTML += '<div>'+ template +'</div>';
         return tasks2
       }
       if (x.statut==='finie') {
-        tasks3.innerHTML += template;
+        tasks3.innerHTML += '<div>'+ template +'</div>';
         return tasks3
       }
 
@@ -101,7 +99,7 @@ let createTasks = () => {
     dateInput.value = "";
     textarea.value = "";
   };
-  
+ 
   let deleteTask = (e) => {
     e.parentElement.parentElement.remove();
   
@@ -138,7 +136,7 @@ let createTasks = () => {
             <span class="small text-secondary">${x.date}</span>
             <p>${x.description}</p>
     
-            <span class="options">
+            <span class="options ">
               <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
               <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
             </span>
@@ -149,3 +147,93 @@ let createTasks = () => {
   
     resetForm();
   };
+  function clearLocalStorage() {
+  
+   if(prompt("vous êtes sur de suprimé tout oui ou nn")==='oui'){
+      localStorage.clear();
+      data = [];
+    
+    // tasks1.innerHTML = `<div class="btn1 w-200"> <strong>TODO<hr></strong> </div>`;
+    // tasks2.innerHTML = "<strong>CURRENT<hr></strong>";
+    // tasks3.innerHTML = "<strong>FINISH<hr></strong>";
+   }
+  }
+
+  const demo= [
+    {
+        "text": "ddddddd",
+        "date": "",
+        "description": "QSDFEGRHY",
+        "statut": "finie"
+    },
+    {
+        "text": "azer",
+        "date": "",
+        "description": "retr",
+        "statut": "courant"
+    },
+    {
+        "text": "sqfgr",
+        "date": "",
+        "description": "sdqfs",
+        "statut": "faire"
+    },
+    {
+        "text": "sqds",
+        "date": "",
+        "description": "sqdfsqQSDFGYJUILOMHGFGFGHGFDSQsdfghjhghjhghj",
+        "statut": "faire"
+    }
+]
+function demonstration(){
+
+  data.splice(0, data.length, ...demo);
+  createTasks();
+//   tasks1.innerHTML = "<strong>TODO<hr></strong> ";
+//   tasks2.innerHTML = "<strong>CURRENT<hr></strong>";
+//   tasks3.innerHTML = "<strong>FINISH<hr></strong>";
+
+// for (const i in demo) {
+//   if (demo[i].statut==='faire') {
+    
+//     tasks1.innerHTML+=   `<div > <span class="fw-bold">${demo[i].text}</span>
+//         <span class="small text-secondary">${demo[i].date}</span>
+//         <p>${demo[i].description}</p>
+    
+//         <span class="options">
+//           <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
+//           <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+//         </span>
+//       </div>`
+
+//   }
+  
+//     if (demo[i].statut==='courant') {
+//       tasks2.innerHTML+=   `<div > <span class="fw-bold">${demo[i].text}</span>
+//       <span class="small text-secondary">${demo[i].date}</span>
+//       <p>${demo[i].description}</p>
+  
+//       <span class="options">
+//         <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
+//         <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+//       </span>
+//     </div>`
+//     }
+//     if (demo[i].statut==='finie') {
+//       tasks3.innerHTML+=   `<div > <span class="fw-bold">${demo[i].text}</span>
+//       <span class="small text-secondary">${demo[i].date}</span>
+//       <p>${demo[i].description}</p>
+  
+//       <span class="options">
+//         <i onClick= "editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
+//         <i onClick ="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+//       </span>
+//     </div>`
+//     }
+  //}
+
+  
+  
+  
+  // resetForm();
+}

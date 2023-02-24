@@ -16,49 +16,32 @@
     <link rel="stylesheet" href="mode83.css" />
 </head>
 
-<body class="d-flex jc-fs p-1">
+<body class="d-flex fw-wrap jc-fs p-1 tache">
     <aside class="p-1">
         <div class="d-flex jc-c">
             <h4 class="mb-3 d-flex jc-c btn1 w-280">TODO Desktop</h4>
         </div>
         <div id="TODO" class="d-flex jc-c">
-            <div id="addNew" data-bs-toggle="modal" class="w-280" data-bs-target="#form">
-                <span>Add New TODO</span>
-                <i class="fas fa-plus"></i>
+            <div id="addNew" data-bs-toggle="modal" class="w-280 action" data-bs-target="#form">
+                <span >Add New TODO</span>            
             </div>
         </div>
         <div id="CURRENT" class="d-flex jc-c p-1">
-            <div id="addNewCurrent" data-bs-toggle="modal" class="w-280" data-bs-target="#form">
-                <span>Add New CURRENT</span>
-                <i class="fas fa-plus"></i>
-            </div>
+            <input id="addNewCurrent" type="submit"  class="w-280 action" value="DeleteAll" width="300px" onclick="clearLocalStorage();">     
         </div>
-        <div class="d-flex jc-c p-1">
-            <div id="addNewFinish" data-bs-toggle="modal" class="w-280" data-bs-target="#form">
-                <span>Add New FINISH</span>
-                <i class="fas fa-plus"></i>
-            </div>
+        <div class="d-flex jc-c p-1">      
+                <input id="addNewFinish" type="submit"  class="w-280 action" value="Demo"  onclick="demonstration();">        
         </div>
     </aside>
-    <main class="d-flex">
+    <main class="d-flex fw-wrap">
         <div class="todo">
-            <div class="desktop mw-1320">
+            <div class="desktop mw-1320 tache">
                 <!-- Modal -->
-                <div class="d-flex g-1">
-                <div class="d-flex jc-c">
-                    <h1 class="text-center my-3 btn1 w-280">TODO</h1>
-                </div>
-                <div class="d-flex jc-c">
-                    <h1 class="text-center my-3 btn1 w-280">CURRENT</h1>
-                </div>
-                <div class="d-flex jc-c">
-                    <h1 class="text-center my-3 btn1 w-280">FINISH</h1>
-                </div>
-                </div>
-                <div class="d-flex g-1">
-                <div id="tasks1" class="f-1-280  tache"></div>
+                <div class="d-flex fw-wrap g-1">
+                <div id="tasks1" class="f-1-280 tache"></div>
                 <div id="tasks2" class="f-1-280 tache"></div>
                 <div id="tasks3" class="f-1-280 tache"></div>
+                
             </div>
                 <form class="modal fade f-1-280" id="form" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">

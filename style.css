@@ -25,11 +25,17 @@ body {
     border-radius: 8px;
     padding: 15px;
   }
-  #addNew {
+  #tasks2 div, #tasks1 div, #tasks3 div {
+    border-radius: 5px;
+    background-color: rgb(23, 248, 248);
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+  #addNew, #addNewCurrent, #addNewFinish, .btn1 {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    background-color:  #ede29b;
+    background-color:  #02084b !important;
     color: white;
     padding: 11px 10px;
     border-radius: 0px 20px 20px 0px;
@@ -50,27 +56,14 @@ body {
     gap: 14px;
   }
   
-  #tasks div {
-    border: 3px solid #abcea1;
-    background-color: #e2eede;
-    border-radius: 6px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    width: 280px;
-    gap: 4px;
-  }
+
     
 .tache {
-    border: 3px solid #abcea1;
+    
     background-color: #e2eede;
     border-radius: 6px;
     padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    width: 280px;
+    min-width: 280px;
     gap: 4px;
   }
   #tasks div .options {
@@ -83,7 +76,7 @@ body {
     cursor: pointer;
   }
   .btn1{
-  background-color: #ede29b; /* Green */
+    background-color:  #02084b;
   border-radius: 0px 20px 20px 0px;
   border: none;
   color: white;
@@ -93,14 +86,10 @@ body {
   display: inline-block;
   font-size: 16px;
   }
-  .btn1:hover{
-    background-color:white; /* Green */
-   
-    border: none;
-    color:#ede29b ;
 
-    
-    }
   .jc-fs{
     justify-content: flex-start;
+  }
+  .w-200{
+    width:200px ;
   }
