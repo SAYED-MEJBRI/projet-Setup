@@ -152,6 +152,7 @@ let createTasks = () => {
    if(prompt("vous êtes sur de suprimé tout oui ou nn")==='oui'){
       localStorage.clear();
       data = [];
+      createTasks();
     
     // tasks1.innerHTML = `<div class="btn1 w-200"> <strong>TODO<hr></strong> </div>`;
     // tasks2.innerHTML = "<strong>CURRENT<hr></strong>";
