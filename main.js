@@ -162,27 +162,27 @@ let createTasks = () => {
 
   const demo= [
     {
-        "text": "ddddddd",
-        "date": "",
-        "description": "QSDFEGRHY",
-        "statut": "finie"
-    },
-    {
-        "text": "azer",
-        "date": "",
-        "description": "retr",
+        "text": "recherche de tage",
+        "date": "2003-02-15",
+        "description": "identifier et contacter les entreprises",
         "statut": "courant"
     },
     {
-        "text": "sqfgr",
-        "date": "",
-        "description": "sdqfs",
+        "text": "Exercice base de données",
+        "date": "2003-02-25",
+        "description": "exercice librairie: faire MCD, MLD, création de la base de données",
+        "statut": "finie"
+    },
+    {
+        "text": "CV",
+        "date": "2003-02-25",
+        "description": "CV en version site web",
         "statut": "faire"
     },
     {
-        "text": "sqds",
-        "date": "",
-        "description": "sqdfsqQSDFGYJUILOMHGFGFGHGFDSQsdfghjhghjhghj",
+        "text": "synfony",
+        "date": "2003-02-25",
+        "description": "Commencer à aprendre php et synfony",
         "statut": "faire"
     }
 ]
